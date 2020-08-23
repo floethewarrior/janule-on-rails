@@ -14,6 +14,7 @@ class Api::V1::MemesController < ApplicationController
   end
 
   def show
+    meme = Meme.find(params[:id])
     if meme
       render json: meme
     else

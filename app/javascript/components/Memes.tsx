@@ -59,7 +59,7 @@ function Memes(props: RouteComponentProps) {
       <div className="py-5">
         <main className="container">
           <div className="text-right mb-3">
-            <Link to="/meme" className="btn custom-button">
+            <Link to="/new_meme" className="btn custom-button">
               Create New Meme
             </Link>
           </div>
