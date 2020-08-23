@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, RouteComponentProps } from "react-router-dom";
 const MEME_INDEX = "/api/v1/memes/index";
 
-function Memes(props) {
+function Memes(props: RouteComponentProps) {
   const [memes, setMemes] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const loadMemes = async () => {
