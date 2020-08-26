@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_043735) do
+ActiveRecord::Schema.define(version: 2020_08_24_032424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_08_22_043735) do
   create_table "memes", force: :cascade do |t|
     t.string "name", null: false
     t.string "creator", null: false
-    t.bigint "meme_id"
+    t.integer "edges", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["meme_id"], name: "index_memes_on_meme_id"
+    t.index ["edges"], name: "index_memes_on_edges"
   end
 
 end

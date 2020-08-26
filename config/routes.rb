@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       get 'memes/index'
       post 'memes/create'
       get '/show/:id', to: 'memes#show'
+      get '/edges/:id', to: 'memes#edges'
+      post 'memes/associate'
       delete '/destroy/:id', to: 'memes#destroy'
     end
   end
